@@ -4,15 +4,17 @@ import { siteConfig } from "../config";
 
 <div
   id="hero"
-  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
+  class="relative isolate overflow-hidden bg-white py-24 md:min-h-screen"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
   <!-- Gradient overlay -->
   <div
     class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+    style={`background: radial-gradient(ellipse 1200px 800px at 70% 30%, ${siteConfig.accentColor}30 0%, ${siteConfig.accentColor}20 25%, ${siteConfig.accentColor}08 50%, rgba(255, 255, 255, 0.2) 80%, white 100%)`}
   >
   </div>
+
+  <!-- Animated background patterns -->
   <svg
     aria-hidden="true"
     class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -21,160 +23,289 @@ import { siteConfig } from "../config";
       <pattern
         x="50%"
         y={-1}
-        id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
-        width={200}
-        height={200}
+        id="grid-pattern"
+        width={40}
+        height={40}
         patternUnits="userSpaceOnUse"
       >
-        <path d="M.5 200V.5H200" fill="none"></path>
+        <path d="M.5 40V.5H40" fill="none" stroke-width="0.5"></path>
       </pattern>
+
+      <!-- AI/Data Science themed symbols -->
       <pattern
-        id="programming-symbols"
+        id="ai-symbols"
         x="0"
         y="0"
-        width="400"
-        height="400"
+        width="300"
+        height="300"
         patternUnits="userSpaceOnUse"
       >
+        <!-- Neural network nodes -->
+        <circle
+          cx="50"
+          cy="50"
+          r="3"
+          fill={`${siteConfig.accentColor}40`}
+          opacity="0.6"></circle>
+        <circle
+          cx="150"
+          cy="80"
+          r="2"
+          fill={`${siteConfig.accentColor}40`}
+          opacity="0.4"></circle>
+        <circle
+          cx="250"
+          cy="60"
+          r="2.5"
+          fill={`${siteConfig.accentColor}40`}
+          opacity="0.5"></circle>
+
+        <!-- Connection lines -->
+        <line
+          x1="50"
+          y1="50"
+          x2="150"
+          y2="80"
+          stroke={`${siteConfig.accentColor}30`}
+          stroke-width="1"
+          opacity="0.3"></line>
+        <line
+          x1="150"
+          y1="80"
+          x2="250"
+          y2="60"
+          stroke={`${siteConfig.accentColor}30`}
+          stroke-width="1"
+          opacity="0.3"></line>
+
+        <!-- Data symbols -->
         <text
-          x="50"
-          y="50"
-          fill={siteConfig.accentColor}
+          x="80"
+          y="150"
+          fill={`${siteConfig.accentColor}50`}
           font-family="monospace"
-          font-size="24"
-          transform="rotate(-15)">&lt;/&gt;</text
+          font-size="16"
+          opacity="0.4">λ</text
         >
         <text
-          x="150"
-          y="100"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(10)">{}</text
-        >
-        <text
-          x="250"
-          y="80"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="18"
-          transform="rotate(-5)">=&gt;</text
-        >
-        <text
-          x="100"
-          y="200"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="22"
-          transform="rotate(15)">[]</text
-        >
-        <text
-          x="300"
+          x="180"
           y="180"
-          fill={siteConfig.accentColor}
+          fill={`${siteConfig.accentColor}50`}
           font-family="monospace"
-          font-size="20"
-          transform="rotate(-10)">&lt;&gt;</text
+          font-size="14"
+          opacity="0.3">∑</text
+        >
+        <text
+          x="120"
+          y="220"
+          fill={`${siteConfig.accentColor}50`}
+          font-family="monospace"
+          font-size="12"
+          opacity="0.4">∂</text
         >
         <text
           x="200"
           y="250"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(5)">()</text
-        >
-        <text
-          x="50"
-          y="320"
-          fill={siteConfig.accentColor}
+          fill={`${siteConfig.accentColor}50`}
           font-family="monospace"
           font-size="18"
-          transform="rotate(-8)">::</text
+          opacity="0.3">π</text
+        >
+
+        <!-- Binary code -->
+        <text
+          x="30"
+          y="280"
+          fill={`${siteConfig.accentColor}40`}
+          font-family="monospace"
+          font-size="10"
+          opacity="0.2">1010110</text
         >
         <text
-          x="350"
-          y="300"
-          fill={siteConfig.accentColor}
+          x="180"
+          y="120"
+          fill={`${siteConfig.accentColor}40`}
           font-family="monospace"
-          font-size="22"
-          transform="rotate(12)">==</text
-        >
-        <text
-          x="150"
-          y="350"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(-15)">++</text
-        >
-        <text
-          x="250"
-          y="370"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(8)">;</text
+          font-size="10"
+          opacity="0.2">0110101</text
         >
       </pattern>
     </defs>
-    <rect
-      fill="url(#programming-symbols)"
-      width="100%"
-      height="100%"
-      opacity="0.2"></rect>
-    <rect
-      fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
-      width="100%"
-      height="100%"
-      stroke-width={0}></rect>
+    <rect fill="url(#ai-symbols)" width="100%" height="100%" opacity="0.8"
+    ></rect>
+    <rect fill="url(#grid-pattern)" width="100%" height="100%" stroke-width={0}
+    ></rect>
   </svg>
-  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
-    <div>
-      <h2
-        class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
-      >
-        Hello! 👋
-      </h2>
-      <h1
-        class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
-      >
-        I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
+
+  <!-- Main content container -->
+  <div class="h-full mx-auto p-8 sm:p-12 md:p-16 lg:p-24 flex items-center">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full"
+    >
+      <!-- Left side: Text content -->
+      <div class="lg:col-span-7 order-2 lg:order-1">
+        <h2
+          class="text-pretty text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-gray-700 animate-fade-in"
         >
-      </h1>
-      <p
-        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
+          Hello xin chào!
+        </h2>
+
+        <h1
+          class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 animate-fade-in animation-delay-200"
+        >
+          I'm <span style={{ color: siteConfig.accentColor }} class="relative">
+            {siteConfig.name}
+            <!-- Animated underline -->
+            <div
+              class="absolute bottom-0 left-0 w-full h-1 animate-expand"
+              style={`background-color: ${siteConfig.accentColor}40`}
+            >
+            </div>
+          </span>
+        </h1>
+
+        <p
+          class="mt-6 sm:mt-8 text-pretty text-lg sm:text-xl md:text-2xl font-medium text-gray-600 animate-fade-in animation-delay-400 leading-relaxed"
+        >
+          {siteConfig.title}
+        </p>
+
+        <!-- Enhanced description -->
+        <p
+          class="mt-4 text-pretty text-base sm:text-lg text-gray-500 animate-fade-in animation-delay-500 max-w-2xl"
+        >
+          Passionate about leveraging AI and machine learning to solve
+          real-world problems, with expertise in Natural Language Processing,
+          Computer Vision and deep learning architectures.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div
+          class="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-600"
+        >
+          <a
+            href="#projects"
+            class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            style={`background-color: ${siteConfig.accentColor}; hover:background-color: ${siteConfig.accentColor}dd`}
+          >
+            View My Work
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+
+          <a
+            href="https://drive.google.com/uc?export=download&id=1Lc-oQR2UA-IY-fgD4TKY8knHNIZj1qVO"
+            target="_blank"
+            class="inline-flex items-center justify-center px-8 py-3 text-base font-medium border-2 rounded-lg transition-all duration-300 hover:scale-105"
+            style={`color: ${siteConfig.accentColor}; border-color: ${siteConfig.accentColor}20; hover:background-color: ${siteConfig.accentColor}10`}
+          >
+            Download My Resume
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right side: Image -->
+      <div
+        class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end"
       >
-        {siteConfig.title}
-      </p>
+        <div class="relative animate-fade-in animation-delay-300">
+          <!-- Decorative background -->
+          <div
+            class="absolute -inset-4 rounded-3xl opacity-20 blur-xl animate-pulse-slow"
+            style={`background-color: ${siteConfig.accentColor}`}
+          >
+          </div>
+
+          <!-- Image container with sophisticated styling -->
+          <div class="relative">
+            <!-- Professional photo placeholder - replace src with your actual photo -->
+            <img
+              src="/photos/main.jpeg"
+              alt="Dat Dao"
+              class="w-80 h-80 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] object-cover rounded-3xl shadow-2xl border-4 border-white hover:scale-105 transition-transform duration-500"
+              onload="this.style.opacity=1"
+              style="opacity: 0; transition: opacity 0.5s ease-in-out;"
+            />
+
+            <!-- Fallback avatar if image doesn't load -->
+            <div
+              class="w-80 h-80 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] rounded-3xl shadow-2xl border-4 border-white flex items-center justify-center text-8xl bg-gradient-to-br from-gray-100 to-gray-200"
+            >
+              👨‍💻
+            </div>
+
+            <!-- Floating accent elements -->
+            <div
+              class="absolute -top-6 -right-6 w-12 h-12 rounded-full opacity-80 animate-float"
+              style={`background-color: ${siteConfig.accentColor}`}
+            >
+            </div>
+            <div
+              class="absolute -bottom-8 -left-8 w-8 h-8 rounded-full opacity-60 animate-float animation-delay-1000"
+              style={`background-color: ${siteConfig.accentColor}`}
+            >
+            </div>
+
+            <!-- Tech badge -->
+            <!-- <div
+              class="absolute -bottom-4 -right-4 bg-white rounded-full px-4 py-2 shadow-lg border-2 border-gray-100"
+            >
+              <span class="text-sm font-semibold text-gray-700"
+                >AI Engineer</span
+              >
+            </div> -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- Social links - repositioned to bottom -->
   <div
-    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
+    class="absolute bottom-8 left-8 sm:left-12 md:left-16 lg:left-24 flex gap-x-4 sm:gap-x-6 text-gray-700 animate-fade-in animation-delay-800"
   >
     {
       siteConfig.social?.email && (
         <a
           href={`mailto:${siteConfig.social.email}`}
           aria-label="Email"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+          class="transition-all duration-300 hover:text-[var(--accent-color)] hover:scale-110 p-2 rounded-full hover:bg-gray-100"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
+            class="h-6 w-6 sm:h-7 sm:w-7"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+            viewBox="0 0 24 24"
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-            <path d="M3 7l9 6l9 -6" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            />
           </svg>
         </a>
       )
@@ -186,58 +317,26 @@ import { siteConfig } from "../config";
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+          class="transition-all duration-300 hover:text-[var(--accent-color)] hover:scale-110 p-2 rounded-full hover:bg-gray-100"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
+            class="h-6 w-6 sm:h-7 sm:w-7"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M8 11v5" />
-              <path d="M8 8v.01" />
-              <path d="M12 16v-5" />
-              <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-              <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-            </>
-          </svg>
-        </a>
-      )
-    }
-    {
-      siteConfig.social?.twitter && (
-        <a
-          href={siteConfig.social.twitter}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
           >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
-            </>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 1 0-4 0"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H5a4 4 0 0 1-4-4z"
+            />
           </svg>
         </a>
       )
@@ -249,24 +348,20 @@ import { siteConfig } from "../config";
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+          class="transition-all duration-300 hover:text-[var(--accent-color)] hover:scale-110 p-2 rounded-full hover:bg-gray-100"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
+            class="h-6 w-6 sm:h-7 sm:w-7"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
+            viewBox="0 0 24 24"
           >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-            </>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            />
           </svg>
         </a>
       )
@@ -278,7 +373,7 @@ import { siteConfig } from "../config";
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -286,20 +381,91 @@ import { siteConfig } from "../config";
     }
   }
 
+  @keyframes expand {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
   .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fadeIn 1s ease-out forwards;
     opacity: 0;
+  }
+
+  .animate-expand {
+    animation: expand 1s ease-out 0.8s forwards;
+    width: 0;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
   }
 
   .animation-delay-200 {
     animation-delay: 0.2s;
   }
 
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+
   .animation-delay-400 {
     animation-delay: 0.4s;
   }
 
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+
   .animation-delay-600 {
     animation-delay: 0.6s;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+
+  /* Image fallback handling */
+  img[src="photos\BVA07195.jpg"] {
+    display: none;
+  }
+
+  img[src="photos\BVA07195.jpg"] + div {
+    display: flex;
+  }
+
+  img:not([src="photos\BVA07195.jpg"]) + div {
+    display: none;
   }
 </style>
